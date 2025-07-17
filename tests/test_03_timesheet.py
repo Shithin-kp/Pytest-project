@@ -5,6 +5,7 @@ import pytest
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
 from pages.timesheet_page import TimesheetPage
+from conftest import username, password
 
 
 @pytest.mark.priority1
@@ -18,7 +19,7 @@ def test_add_new_day_button(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     assert "home" in driver.current_url, "Failed to redirect to the home page after login"
     print(home_page.dashboardDisplayed())

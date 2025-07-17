@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 class HomePage(BasePage):
+
+    # Homepage locators
     timesheet_option = (By.XPATH, "//h2[normalize-space()='Timesheet']")
     attendance_option = (By.XPATH, "//h2[normalize-space()='Attendance']")
     userTools_option = (By.XPATH, "//h2[normalize-space()='User Tools']")
@@ -13,30 +15,53 @@ class HomePage(BasePage):
     dashboard_option_in_hamburger_menu = (By.XPATH, "//span[normalize-space(text())='Dashboard']")
     timesheet_option_in_hamburger_menu = (By.XPATH, "//span[normalize-space(text())='Timesheet']")
 
+    # Methods for interacting with the homepage elements
+
+    # Methods to check if timesheet element are displayed
     def timesheetDisplayed(self):
         return self.driver.find_element(*self.timesheet_option).is_displayed()
+
+    # Methods to check if attendance element are displayed
     def attendanceDisplayed(self):
         return self.driver.find_element(*self.attendance_option).is_displayed()
+
+    # Methods to check if user tools element are displayed
     def userToolsDisplayed(self):
         return self.driver.find_element(*self.userTools_option).is_displayed()
+
+    # Methods to click the timesheet option
     def clickTimesheet(self):
         self.driver.find_element(*self.timesheet_option).click()
         time.sleep(2)
+
+    # Methods to click the attendance option
     def clickAttendance(self):
         self.driver.find_element(*self.attendance_option).click()
         time.sleep(2)
+
+    # Methods to click the user tools option
     def clickUserTools(self):
         self.driver.find_element(*self.userTools_option).click()
         time.sleep(2)
+
+    # Methods to click the hamburger menu
     def clickHamburgerMenu(self):
         self.driver.find_element(*self.hamburger_menu).click()
         time.sleep(2)
+
+    # Methods to click the profile icon
     def clickProfileIcon(self):
         self.driver.find_element(*self.profile_icon).click()
+
+    # Methods to click the logout button
     def clickLogout(self):
         self.driver.find_element(*self.logout_button).click()
         time.sleep(2)
+
+    # Methods to check if the dashboard displayed in the hamburger menu
     def dashboardDisplayed(self):
         return self.driver.find_element(*self.dashboard_option_in_hamburger_menu).is_displayed()
+
+    # Methods to check if the timesheet displayed in the hamburger menu
     def timesheetDisplayedInHamburgerMenu(self):
         return self.driver.find_element(*self.timesheet_option_in_hamburger_menu).is_displayed()

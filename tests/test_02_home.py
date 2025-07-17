@@ -5,6 +5,7 @@ import pytest
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
 from twocaptcha import TwoCaptcha
+from conftest import username, password
 
 
 @pytest.mark.priority1
@@ -17,7 +18,7 @@ def test_home_page_elements(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     assert "home" in driver.current_url, "Failed to redirect to the home page after login"
     print(home_page.dashboardDisplayed())
@@ -37,7 +38,7 @@ def test_timsheet_navigation(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     home_page.clickTimesheet()
     assert "time" in driver.current_url, "Failed to navigate to the Timesheet page"
@@ -51,7 +52,7 @@ def test_attendance_navigation(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     home_page.clickAttendance()
     assert "attendance" in driver.current_url, "Failed to navigate to the Attendance page"
@@ -65,7 +66,7 @@ def test_user_tools_navigation(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     home_page.clickUserTools()
     assert "User-tools" in driver.current_url, "Failed to navigate to the User Tools page"
@@ -79,7 +80,7 @@ def test_hamburger_menu(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     home_page.clickHamburgerMenu()
     assert home_page.dashboardDisplayed() is True, "Dashboard option is not displayed in the hamburger menu"
@@ -95,7 +96,7 @@ def test_logout(driver):
     # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
-    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    login_page.logIn(username, password)
     time.sleep(2)
     home_page.clickProfileIcon()
     home_page.clickLogout()

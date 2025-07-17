@@ -2,6 +2,7 @@ import time
 
 import pytest
 from pages.login_page import LoginPage
+from conftest import username, password
 
 @pytest.mark.priority1
 def test_valid_login(driver):
@@ -9,8 +10,8 @@ def test_valid_login(driver):
     Test description: Verify valid login redirects to Lynks dashboard.
     """
     login_page = LoginPage(driver)
-    login_page.enterUserName("shithin.kokkarni@kefitech.com")
-    login_page.enterPassword("DUlKKyKV")
+    login_page.enterUserName(username)
+    login_page.enterPassword(password)
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.clickLogin()

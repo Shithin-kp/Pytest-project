@@ -10,5 +10,8 @@ class TimesheetPage(BasePage):
     addproject_button = (By.XPATH, "(//div[@class='MuiBox-root css-i3pbo']/following-sibling::button)[3]")
     addtask_button = (By.XPATH, "(//div[@class='MuiBox-root css-1qm1lh']/following-sibling::button)[3]")
 
+    # Methods to interact with the timesheet page elements
+
+    # Method to click the 'Add New Day' button
     def clickaddNewDay(self):
         self.driver.find_element(*self.addnewday_button).click()
