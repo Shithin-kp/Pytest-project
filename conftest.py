@@ -6,8 +6,8 @@ from datetime import datetime
 
 # URL and credentials for the KefiLynks application
 BaseUrl = "https://kefitechlynks.com/"
-username = "shithin.kokkarni@kefitech.com"
-password = "DUlKKyKV"
+username = "Your username"
+password = "Password"
 
 # Create 'screenshots' folder if not exist
 SCREENSHOT_DIR = os.path.join(os.path.dirname(__file__), '..', 'screenshots')
