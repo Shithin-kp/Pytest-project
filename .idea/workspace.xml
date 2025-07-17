@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be76536d-f77e-4829-9f57-3916cb64160a" name="Changes" comment="Report changes and added more test cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/timesheet_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/timesheet_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_01_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_01_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_02_home.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_02_home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_03_timesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_03_timesheet.py" afterDir="false" />
@@ -200,7 +196,7 @@
       <workItem from="1752549781475" duration="16731000" />
       <workItem from="1752636966719" duration="16891000" />
       <workItem from="1752660690534" duration="6295000" />
-      <workItem from="1752722679304" duration="14456000" />
+      <workItem from="1752722679304" duration="19124000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -242,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752733670899</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Report changes and added more test cases">
+      <option name="closed" value="true" />
+      <created>1752739930768</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752739930768</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -16,7 +16,6 @@ def test_add_new_day_button(driver):
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
     timesheet_page = TimesheetPage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)

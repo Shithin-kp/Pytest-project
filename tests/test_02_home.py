@@ -15,7 +15,6 @@ def test_home_page_elements(driver):
         """
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)
@@ -35,7 +34,6 @@ def test_timsheet_navigation(driver):
     """
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)
@@ -49,7 +47,6 @@ def test_attendance_navigation(driver):
     """
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)
@@ -63,7 +60,6 @@ def test_user_tools_navigation(driver):
     """
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)
@@ -77,7 +73,6 @@ def test_hamburger_menu(driver):
     """
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)
@@ -93,7 +88,6 @@ def test_logout(driver):
     """
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
-    # login_page.load()
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.logIn(username, password)

@@ -24,7 +24,6 @@ def test_invalid_login(driver):
            Test description: Verify invalid login
     """
     login_page = LoginPage(driver)
-#    login_page.load()
     login_page.enterUserName("invalid_user")
     login_page.enterPassword("invalid_password")
     # Pause to let you solve the CAPTCHA manually
