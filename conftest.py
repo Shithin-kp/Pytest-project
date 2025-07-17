@@ -3,6 +3,10 @@ from selenium import webdriver
 import os
 from datetime import datetime
 
+
+BaseUrl = "https://kefitechlynks.com/"
+
+
 # Create 'screenshots' folder if not exist
 SCREENSHOT_DIR = os.path.join(os.path.dirname(__file__), '..', 'screenshots')
 os.makedirs(SCREENSHOT_DIR, exist_ok=True)
@@ -14,6 +18,7 @@ def pytest_html_report_title(report):
 def driver(request):
     driver = webdriver.Chrome()
     driver.maximize_window()
+    driver.get(BaseUrl)
     driver.implicitly_wait(3)
 
     # Attach the driver to the request node for access in hooks

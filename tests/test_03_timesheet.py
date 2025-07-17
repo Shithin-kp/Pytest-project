@@ -15,12 +15,11 @@ def test_add_new_day_button(driver):
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
     timesheet_page = TimesheetPage(driver)
-    login_page.load()
-    login_page.enterUserName("shithin.kokkarni@kefitech.com")
-    login_page.enterPassword("DUlKKyKV")
-    time.sleep(10)
-    login_page.clickLogin()
-    time.sleep(3)
+    # login_page.load()
+    # Pause to let you solve the CAPTCHA manually
+    login_page.pauseForCaptcha()
+    login_page.logIn("shithin.kokkarni@kefitech.com", "DUlKKyKV")
+    time.sleep(2)
     assert "home" in driver.current_url, "Failed to redirect to the home page after login"
     print(home_page.dashboardDisplayed())
     home_page.clickTimesheet()

@@ -9,8 +9,8 @@ class LoginPage(BasePage):
     error_message = (By.CSS_SELECTOR, "h1[class='loginMessage'] p")
     LOGIN_BUTTON = (By.CSS_SELECTOR, "button[type='submit']")
 
-    def load(self):
-        self.driver.get("https://kefitechlynks.com/")
+#    def load(self):
+#        self.driver.get("https://kefitechlynks.com/")
 
     def enterUserName(self, username):
         self.find(*self.USERNAME_INPUT).send_keys(username)
@@ -27,7 +27,10 @@ class LoginPage(BasePage):
     def logIn(self, username, password):
         self.find(*self.USERNAME_INPUT).send_keys(username)
         self.find(*self.PASSWORD_INPUT).send_keys(password)
-        time.sleep(15)
+        time.sleep(1)
         self.find(*self.LOGIN_BUTTON).click()
 
-
+    def pauseForCaptcha(self):
+        print("\n🧩 Please solve the Captcha in the browser.")
+        input("🔐 Press ENTER here once the captcha is solved...\n")
+        time.sleep(2)

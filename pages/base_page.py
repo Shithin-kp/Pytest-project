@@ -5,5 +5,5 @@ class BasePage:
     def find(self, by, value):
         return self.driver.find_element(by, value)
 
-    def visit(self, url):
-        self.driver.get(url)
+    # def visit(self, url):
+    #     self.driver.get(url)
