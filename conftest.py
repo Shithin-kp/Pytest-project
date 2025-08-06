@@ -6,7 +6,7 @@ from datetime import datetime
 
 # URL and credentials for the KefiLynks application
 BaseUrl = "https://kefitechlynks.com/"
-username = "shithin.kokkarni@kefitech.com"
+username = "shithin@kefitech.com"
 password = "DUlKKyKV"
 
 # Create 'screenshots' folder if not exist
