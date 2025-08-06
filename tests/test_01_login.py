@@ -15,7 +15,7 @@ def test_valid_login(driver):
     # Pause to let you solve the CAPTCHA manually
     login_page.pauseForCaptcha()
     login_page.clickLogin()
-    time.sleep(2)
+    time.sleep(1)
     assert "home" in driver.current_url, "Failed to redirect to Lynks dashboard after valid login"
 
 @pytest.mark.priority2

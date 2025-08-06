@@ -2,6 +2,7 @@ import time
 
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+import os
 
 class LoginPage(BasePage):
 
@@ -36,7 +37,14 @@ class LoginPage(BasePage):
         self.find(*self.LOGIN_BUTTON).click()
 
     # Method to pause for captcha resolution
+    # def pauseForCaptcha(self):
+    #     print("\n Please solve the Captcha in the browser.")
+    #     input(" Press ENTER here once the captcha is solved...\n")
+    #     time.sleep(2)
+
     def pauseForCaptcha(self):
-        print("\n🧩 Please solve the Captcha in the browser.")
-        input("🔐 Press ENTER here once the captcha is solved...\n")
-        time.sleep(2)
+        if os.getenv("JENKINS_HOME"):  # if running in Jenkins
+            print("[SKIP CAPTCHA] Running in Jenkins. Skipping CAPTCHA wait.")
+            time.sleep(10)
+            return
+        input("Solve the CAPTCHA and press Enter to continue...")

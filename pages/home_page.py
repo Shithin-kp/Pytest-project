@@ -6,10 +6,10 @@ from pages.base_page import BasePage
 class HomePage(BasePage):
 
     # Homepage locators
-    timesheet_option = (By.XPATH, "//h2[normalize-space()='Timesheet']")
+    timesheet_option = (By.XPATH, "(//div[@class='MuiCardContent-root css-3sze9j'])[1]")
     attendance_option = (By.XPATH, "//h2[normalize-space()='Attendance']")
     userTools_option = (By.XPATH, "//h2[normalize-space()='User Tools']")
-    hamburger_menu = (By.XPATH, "(//div[contains(@class,'MuiToolbar-root MuiToolbar-gutters')]//button)[2]")
+    hamburger_menu = (By.XPATH, "(//div[contains(@class,'MuiToolbar-root MuiToolbar-gutters')]//button)[1]")
     profile_icon = (By.XPATH, "//div[contains(@class,'MuiAvatar-root MuiAvatar-circular')]")
     logout_button = (By.XPATH, "//li[normalize-space(text())='Logout']")
     dashboard_option_in_hamburger_menu = (By.XPATH, "//span[normalize-space(text())='Dashboard']")
